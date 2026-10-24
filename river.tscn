@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://j10wxegqxetp" path="res://assets/props_and_buildings.png" id="4_ylf0x"]
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
+[ext_resource type="Script" uid="uid://b1ekuscj7esj3" path="res://area_river.gd" id="7_ylf0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiml5"]
 texture = ExtResource("1_gqjxk")
@@ -17052,6 +17053,9 @@ size = Vector2(494, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esw2o"]
 size = Vector2(10, 337)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ag4ip"]
+size = Vector2(12, 13)
+
 [node name="Node2D" type="Node2D" unique_id=229776437]
 position = Vector2(-245, -171)
 
@@ -17103,7 +17107,7 @@ position = Vector2(500, 161)
 shape = SubResource("RectangleShape2D_esw2o")
 
 [node name="CharacterBody2D" parent="." unique_id=25074221 instance=ExtResource("6_a75lk")]
-position = Vector2(74, 28)
+position = Vector2(88, 38)
 
 [node name="Camera2D (boundary)" type="Camera2D" parent="CharacterBody2D" unique_id=1151359410]
 zoom = Vector2(4, 4)
@@ -17111,3 +17115,15 @@ limit_left = -245
 limit_top = -175
 limit_right = 250
 limit_bottom = 150
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=206819043]
+position = Vector2(130, 80)
+script = ExtResource("7_ylf0x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=981199827]
+position = Vector2(-58, -72.5)
+shape = SubResource("RectangleShape2D_ag4ip")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
