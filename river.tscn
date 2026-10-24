@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://j10wxegqxetp" path="res://assets/props_and_buildings.png" id="4_ylf0x"]
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://b1ekuscj7esj3" path="res://area_river.gd" id="7_ylf0x"]
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
+=======
+>>>>>>> parent of aa28086 (spawn and river)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiml5"]
 texture = ExtResource("1_gqjxk")
@@ -18197,9 +18200,6 @@ size = Vector2(494, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esw2o"]
 size = Vector2(10, 337)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ag4ip"]
-size = Vector2(12, 13)
-
 [node name="Node2D" type="Node2D" unique_id=229776437]
 position = Vector2(-245, -171)
 
@@ -18251,7 +18251,7 @@ position = Vector2(500, 161)
 shape = SubResource("RectangleShape2D_esw2o")
 
 [node name="CharacterBody2D" parent="." unique_id=25074221 instance=ExtResource("6_a75lk")]
-position = Vector2(88, 38)
+position = Vector2(74, 28)
 
 [node name="Camera2D (boundary)" type="Camera2D" parent="Farmer" unique_id=1151359410]
 zoom = Vector2(4, 4)
@@ -18259,6 +18259,7 @@ limit_left = -245
 limit_top = -175
 limit_right = 250
 limit_bottom = 150
+<<<<<<< HEAD
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=206819043]
@@ -18274,3 +18275,5 @@ shape = SubResource("RectangleShape2D_ag4ip")
 
 [node name="Watering Can" parent="." unique_id=2032208259 instance=ExtResource("9_stc0s")]
 position = Vector2(333, 135)
+=======
+>>>>>>> parent of aa28086 (spawn and river)
