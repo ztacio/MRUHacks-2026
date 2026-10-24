@@ -10,8 +10,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://b1ekuscj7esj3" path="res://area_river.gd" id="7_ylf0x"]
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
+=======
+>>>>>>> parent of aa28086 (spawn and river)
 =======
 >>>>>>> parent of aa28086 (spawn and river)
 =======
@@ -18268,6 +18271,7 @@ limit_bottom = 150
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=206819043]
@@ -18283,6 +18287,8 @@ shape = SubResource("RectangleShape2D_ag4ip")
 
 [node name="Watering Can" parent="." unique_id=2032208259 instance=ExtResource("9_stc0s")]
 position = Vector2(333, 135)
+=======
+>>>>>>> parent of aa28086 (spawn and river)
 =======
 >>>>>>> parent of aa28086 (spawn and river)
 =======
