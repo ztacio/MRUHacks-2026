@@ -2,6 +2,12 @@
 
 [ext_resource type="TileSet" uid="uid://dxnqvm3rjlf5x" path="res://tilesets/maintileset.tres" id="1_3a72r"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx44i"]
+size = Vector2(448.5, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3ee7"]
+size = Vector2(3, 325)
+
 [node name="spawn" type="Node2D" unique_id=1708653222]
 
 [node name="Flooring" type="TileMapLayer" parent="." unique_id=625712460]
@@ -41,6 +47,27 @@ tile_map_data = PackedByteArray("AAAIAOz/BwAFAAUAAAAIAO3/BwAFAAYAAAAIAO7/BwAFAAc
 tile_set = ExtResource("1_3a72r")
 
 [node name="Stage 3" type="TileMapLayer" parent="Center/Tree Stages" unique_id=1929261886]
-visible = false
 tile_map_data = PackedByteArray("AAAHAOn/BgAPAAAAAAAHAOr/BgAPAAEAAAAHAOv/BgAPAAIAAAAHAOz/BgAPAAMAAAAHAO3/BgAPAAQAAAAHAO7/BgAPAAUAAAAHAO//BgAPAAYAAAAHAPD/BgAPAAcAAAAIAOn/BgAQAAAAAAAIAOr/BgAQAAEAAAAIAOv/BgAQAAIAAAAIAOz/BgAQAAMAAAAIAO3/BgAQAAQAAAAIAO7/BgAQAAUAAAAIAO//BgAQAAYAAAAIAPD/BgAQAAcAAAAJAOr/BgARAAEAAAAJAOv/BgARAAIAAAAJAOz/BgARAAMAAAAJAO3/BgARAAQAAAAJAO7/BgARAAUAAAAJAO//BgARAAYAAAAJAPD/BgARAAcAAAAKAOr/BgASAAEAAAAKAOv/BgASAAIAAAAKAOz/BgASAAMAAAAKAO3/BgASAAQAAAAKAO7/BgASAAUAAAAKAO//BgASAAYAAAALAOv/BgATAAIAAAALAOz/BgATAAMAAAALAO3/BgATAAQAAAALAO7/BgATAAUAAAAFAOz/BgANAAMAAAAFAO3/BgANAAQAAAAFAO7/BgANAAUAAAAGAOr/BgAOAAEAAAAGAOv/BgAOAAIAAAAGAOz/BgAOAAMAAAAGAO3/BgAOAAQAAAAGAO7/BgAOAAUAAAAGAO//BgAOAAYAAAA=")
 tile_set = ExtResource("1_3a72r")
+
+[node name="Map Colliders" type="Node2D" parent="." unique_id=1193488256]
+
+[node name="Side Colliders" type="Area2D" parent="Map Colliders" unique_id=1812033067]
+
+[node name="Bottom Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders" unique_id=589108391]
+position = Vector2(127.75, -78)
+shape = SubResource("RectangleShape2D_kx44i")
+
+[node name="Top Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders" unique_id=1319924236]
+position = Vector2(128, -402)
+shape = SubResource("RectangleShape2D_kx44i")
+
+[node name="Side Colliders2" type="Area2D" parent="Map Colliders" unique_id=59230546]
+
+[node name="Left Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders2" unique_id=704177271]
+position = Vector2(-97.5, -242.5)
+shape = SubResource("RectangleShape2D_j3ee7")
+
+[node name="Right Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders2" unique_id=497695034]
+position = Vector2(353, -241)
+shape = SubResource("RectangleShape2D_j3ee7")
