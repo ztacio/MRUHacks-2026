@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dwbn7csvu3nca"]
 
+<<<<<<< HEAD:watering can.tscn
+[ext_resource type="Texture2D" uid="uid://cbbet3eyk5385" path="res://assets/Tool_Watering_Can.png" id="1_q5jlx"]
+=======
 [ext_resource type="Texture2D" uid="uid://cbbet3eyk5385" path="res://assets/Tool_Watering_Can.png" id="1_do6aj"]
+>>>>>>> parent of a66be7b (changed positioning of certain objects):fisherman.tscn
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7xu1q"]
-atlas = ExtResource("1_do6aj")
+atlas = ExtResource("1_q5jlx")
 region = Rect2(70, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a75lk"]
