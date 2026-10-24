@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
-[ext_resource type="PackedScene" uid="uid://dwbn7csvu3nca" path="res://fisherman.tscn" id="9_stc0s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiml5"]
 texture = ExtResource("1_gqjxk")
@@ -18256,6 +18255,3 @@ limit_left = -245
 limit_top = -175
 limit_right = 250
 limit_bottom = 150
-
-[node name="Watering Can" parent="." unique_id=2032208259 instance=ExtResource("9_stc0s")]
-position = Vector2(333, 135)
