@@ -3,11 +3,16 @@
 [ext_resource type="TileSet" uid="uid://dxnqvm3rjlf5x" path="res://tilesets/maintileset.tres" id="1_3a72r"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="2_yqulk"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kx44i"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx44i"]
-size = Vector2(448.5, 4)
+size = Vector2(448.5, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3ee7"]
-size = Vector2(3, 325)
+size = Vector2(23, 325)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v48a6"]
+size = Vector2(111, 20)
 
 [node name="spawn" type="Node2D" unique_id=1708653222]
 
@@ -60,27 +65,35 @@ position = Vector2(96, 400)
 tile_map_data = PackedByteArray("AAAHAOn/BgAPAAAAAAAHAOr/BgAPAAEAAAAHAOv/BgAPAAIAAAAHAOz/BgAPAAMAAAAHAO3/BgAPAAQAAAAHAO7/BgAPAAUAAAAHAO//BgAPAAYAAAAHAPD/BgAPAAcAAAAIAOn/BgAQAAAAAAAIAOr/BgAQAAEAAAAIAOv/BgAQAAIAAAAIAOz/BgAQAAMAAAAIAO3/BgAQAAQAAAAIAO7/BgAQAAUAAAAIAO//BgAQAAYAAAAIAPD/BgAQAAcAAAAJAOr/BgARAAEAAAAJAOv/BgARAAIAAAAJAOz/BgARAAMAAAAJAO3/BgARAAQAAAAJAO7/BgARAAUAAAAJAO//BgARAAYAAAAJAPD/BgARAAcAAAAKAOr/BgASAAEAAAAKAOv/BgASAAIAAAAKAOz/BgASAAMAAAAKAO3/BgASAAQAAAAKAO7/BgASAAUAAAAKAO//BgASAAYAAAALAOv/BgATAAIAAAALAOz/BgATAAMAAAALAO3/BgATAAQAAAALAO7/BgATAAUAAAAFAOz/BgANAAMAAAAFAO3/BgANAAQAAAAFAO7/BgANAAUAAAAGAOr/BgAOAAEAAAAGAOv/BgAOAAIAAAAGAOz/BgAOAAMAAAAGAO3/BgAOAAQAAAAGAO7/BgAOAAUAAAAGAO//BgAOAAYAAAA=")
 tile_set = ExtResource("1_3a72r")
 
-[node name="Map Colliders" type="Node2D" parent="." unique_id=1193488256]
-
-[node name="Side Colliders" type="Area2D" parent="Map Colliders" unique_id=1812033067]
-
-[node name="Bottom Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders" unique_id=589108391]
-position = Vector2(224.25, 322)
-shape = SubResource("RectangleShape2D_kx44i")
-
-[node name="Top Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders" unique_id=1319924236]
-position = Vector2(224.5, -2)
-shape = SubResource("RectangleShape2D_kx44i")
-
-[node name="Side Colliders2" type="Area2D" parent="Map Colliders" unique_id=59230546]
-
-[node name="Left Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders2" unique_id=704177271]
-position = Vector2(-1, 157.5)
-shape = SubResource("RectangleShape2D_j3ee7")
-
-[node name="Right Collider" type="CollisionShape2D" parent="Map Colliders/Side Colliders2" unique_id=497695034]
-position = Vector2(449.5, 159)
-shape = SubResource("RectangleShape2D_j3ee7")
-
-[node name="CharacterBody2D" parent="." unique_id=25074221 instance=ExtResource("2_yqulk")]
+[node name="Farmer" parent="." unique_id=25074221 instance=ExtResource("2_yqulk")]
 position = Vector2(233, 184)
+
+[node name="Camera2D" type="Camera2D" parent="Farmer" unique_id=509273199]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 448
+limit_bottom = 320
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1384247738]
+physics_material_override = SubResource("PhysicsMaterial_kx44i")
+
+[node name="Bottom Collider" type="CollisionShape2D" parent="StaticBody2D" unique_id=589108391]
+position = Vector2(224, 329)
+shape = SubResource("RectangleShape2D_kx44i")
+
+[node name="Top Collider" type="CollisionShape2D" parent="StaticBody2D" unique_id=1319924236]
+position = Vector2(224.5, -8.5)
+shape = SubResource("RectangleShape2D_kx44i")
+
+[node name="Left Collider" type="CollisionShape2D" parent="StaticBody2D" unique_id=704177271]
+position = Vector2(-12, 162)
+shape = SubResource("RectangleShape2D_j3ee7")
+
+[node name="Right Collider" type="CollisionShape2D" parent="StaticBody2D" unique_id=497695034]
+position = Vector2(459.5, 159)
+shape = SubResource("RectangleShape2D_j3ee7")
+
+[node name="Inaccessible Area" type="CollisionShape2D" parent="StaticBody2D" unique_id=1135151140]
+position = Vector2(231, 102)
+shape = SubResource("RectangleShape2D_v48a6")
