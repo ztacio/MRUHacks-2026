@@ -13,16 +13,11 @@ config_version=5
 config/name="MRUHacks 2026"
 run/main_scene="uid://crmb7xm0puna8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-<<<<<<< HEAD
-=======
 config/icon="res://icon.svg"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of aa28086 (spawn and river)
-=======
->>>>>>> parent of aa28086 (spawn and river)
-=======
->>>>>>> parent of aa28086 (spawn and river)
+
+[autoload]
+
+Navigation="*uid://dxjo7yq3xa6k0"
 
 [physics]
 
