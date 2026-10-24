@@ -7,10 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://j10wxegqxetp" path="res://assets/props_and_buildings.png" id="4_ylf0x"]
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
-=======
->>>>>>> parent of aa28086 (spawn and river)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiml5"]
 texture = ExtResource("1_gqjxk")
@@ -18249,11 +18246,7 @@ shape = SubResource("RectangleShape2D_esw2o")
 position = Vector2(500, 161)
 shape = SubResource("RectangleShape2D_esw2o")
 
-<<<<<<< HEAD
 [node name="Farmer" parent="." unique_id=25074221 instance=ExtResource("6_a75lk")]
-=======
-[node name="CharacterBody2D" parent="." unique_id=25074221 instance=ExtResource("6_a75lk")]
->>>>>>> parent of aa28086 (spawn and river)
 position = Vector2(74, 28)
 
 [node name="Camera2D (boundary)" type="Camera2D" parent="Farmer" unique_id=1151359410]
