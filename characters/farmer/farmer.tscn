@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://e6etqciv13w"]
 
+[ext_resource type="Script" uid="uid://bul3oxms3qaf3" path="res://characters/farmer/farmer.gd" id="1_4cuon"]
 [ext_resource type="Texture2D" uid="uid://telfq5y7y44c" path="res://characters/farmer/FarmerCharacter.png" id="1_7x01p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cuon"]
@@ -360,7 +361,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_m4fl6")
 }],
 "loop": 1,
-"name": &"idle down",
+"name": &"idle_down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -383,7 +384,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lam0n")
 }],
 "loop": 1,
-"name": &"idle left",
+"name": &"idle_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -406,7 +407,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u0bur")
 }],
 "loop": 1,
-"name": &"idle right",
+"name": &"idle_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -429,7 +430,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u7vqg")
 }],
 "loop": 1,
-"name": &"idle up",
+"name": &"idle_up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -461,7 +462,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_l0h0x")
 }],
 "loop": 1,
-"name": &"interact down",
+"name": &"interact_down",
 "speed": 7.0
 }, {
 "frames": [{
@@ -493,7 +494,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_q3ho8")
 }],
 "loop": 1,
-"name": &"interact left",
+"name": &"interact_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -525,7 +526,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_w3u2j")
 }],
 "loop": 1,
-"name": &"interact right",
+"name": &"interact_right",
 "speed": 7.0
 }, {
 "frames": [{
@@ -557,7 +558,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8umdc")
 }],
 "loop": 1,
-"name": &"interact up",
+"name": &"interact_up",
 "speed": 7.0
 }, {
 "frames": [{
@@ -580,7 +581,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ldwyb")
 }],
 "loop": 1,
-"name": &"walk down",
+"name": &"walk_down",
 "speed": 7.0
 }, {
 "frames": [{
@@ -603,7 +604,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bgp2n")
 }],
 "loop": 1,
-"name": &"walk left",
+"name": &"walk_left",
 "speed": 7.0
 }, {
 "frames": [{
@@ -626,7 +627,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_010mj")
 }],
 "loop": 1,
-"name": &"walk right",
+"name": &"walk_right",
 "speed": 7.0
 }, {
 "frames": [{
@@ -649,7 +650,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_vag0n")
 }],
 "loop": 1,
-"name": &"walk up",
+"name": &"walk_up",
 "speed": 7.0
 }]
 
@@ -657,13 +658,12 @@ animations = [{
 size = Vector2(8, 7)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=25074221]
+script = ExtResource("1_4cuon")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1109338352]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_xoan5")
-animation = &"idle up"
-frame = 5
-frame_progress = 0.8870002
+animation = &"walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1302985892]
 position = Vector2(0, -3.5)
