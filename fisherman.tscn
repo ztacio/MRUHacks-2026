@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://dwbn7csvu3nca"]
 
 [ext_resource type="Texture2D" uid="uid://cbbet3eyk5385" path="res://assets/Tool_Watering_Can.png" id="1_do6aj"]
+=======
+[gd_scene format=3 uid="uid://dxh1soebogi57"]
+
+[ext_resource type="Texture2D" path="res://assets/Tool_Watering_Can.png" id="1_do6aj"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do6aj"]
 size = Vector2(16, 15)
