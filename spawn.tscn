@@ -20919,7 +20919,7 @@ shape = SubResource("RectangleShape2D_xoan5")
 position = Vector2(231, 187)
 
 [node name="Camera2D" type="Camera2D" parent="Farmer" unique_id=509273199]
-zoom = Vector2(4, 4)
+zoom = Vector2(3.5, 3.5)
 limit_left = 0
 limit_top = 0
 limit_right = 448

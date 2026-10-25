@@ -18291,7 +18291,7 @@ position = Vector2(268, 278)
 position = Vector2(98, 49)
 
 [node name="Camera2D (boundary)" type="Camera2D" parent="Farmer" unique_id=1151359410]
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 limit_left = -245
 limit_top = -175
 limit_right = 250
