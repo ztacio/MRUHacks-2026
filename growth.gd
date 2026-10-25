@@ -19,8 +19,7 @@ func _process(delta: float) -> void:
 
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:
-	print("something entered the tree area!")
-	print(body.name)
+
 	if body.name == "Farmer":
 		if Global.has_watering_can:
 			$"Stage 2".visible = true

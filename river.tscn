@@ -18234,7 +18234,7 @@ size = Vector2(71.5, 59.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5ypc"]
 size = Vector2(39, 9.25)
 
-[node name="Node2D" type="Node2D" unique_id=229776437]
+[node name="Node2D2" type="Node2D" unique_id=229776437]
 position = Vector2(-245, -171)
 
 [node name="water_grass_path" type="TileMapLayer" parent="." unique_id=1161830327]
