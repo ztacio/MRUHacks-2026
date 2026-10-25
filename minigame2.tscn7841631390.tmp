@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://dg7nobtwcuymb"]
+
+[ext_resource type="FontFile" uid="uid://dsnau1dk5cagb" path="res://PressStart2P-Regular.ttf" id="1_0evxp"]
+[ext_resource type="PackedScene" uid="uid://doxs8tk6718r2" path="res://button.tscn" id="2_0evxp"]
+[ext_resource type="PackedScene" uid="uid://dw1xve8xb4brx" path="res://numbers.tscn" id="3_ot322"]
+[ext_resource type="Script" uid="uid://b880ekxbh6bsy" path="res://enter_button.gd" id="3_qe5je"]
+[ext_resource type="PackedScene" uid="uid://db3f8keysgda7" path="res://enter.tscn" id="4_lyda3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esw2o"]
+bg_color = Color(0.8156863, 0.74509805, 0.6117647, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.78039217, 0.54901963, 0.34901962, 1)
+
+[node name="Textbox" type="CanvasLayer" unique_id=1066764371]
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=277208526]
+anchors_preset = -1
+anchor_top = 0.75500005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -422.24002
+offset_right = -17.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 243)
+theme_override_constants/margin_left = -16
+theme_override_constants/margin_top = -67
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -16
+
+[node name="Panel" type="Panel" parent="MarginContainer2" unique_id=757003555]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esw2o")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2" unique_id=1938209991]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer2/MarginContainer" unique_id=840771561]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/MarginContainer" unique_id=1991062909]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer2/MarginContainer/HBoxContainer" unique_id=1979979969]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0evxp")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1691470618]
+anchors_preset = -1
+anchor_top = 0.75500005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -422.24002
+offset_right = -17.0
+offset_bottom = -421.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = -16
+theme_override_constants/margin_top = -67
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -16
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=741720790]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esw2o")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1577559304]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/MarginContainer" unique_id=786189931]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=287821127]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=2109188229]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0evxp")
+text = " Arrange the Elements in the proper order & amount based on the logic  rules below:
+
+    1. The formula begins and ends with the exact same element, and  no two identical elements can be placed directly next to each other.
+    2. The number of Hydrogen atoms is exactly one greater than the  number of Oxygen atoms, which is exactly one greater than the total  number of Nitrogen atoms.
+    3. The compound is made of two separate polyatomic ions. The first  ion contains exactly four Hydrogen atoms, and the second ion  contains exactly three Oxygen atoms."
+autowrap_mode = 3
+
+[node name="Submit Button" parent="." unique_id=752672529 instance=ExtResource("4_lyda3")]
+position = Vector2(520, 504)
+script = ExtResource("3_qe5je")
+
+[node name="Elements" type="Node2D" parent="." unique_id=353186661]
+position = Vector2(208, 376)
+
+[node name="E1" parent="Elements" unique_id=884997147 instance=ExtResource("2_0evxp")]
+
+[node name="E4" parent="Elements" unique_id=1407799040 instance=ExtResource("2_0evxp")]
+position = Vector2(600, 0)
+
+[node name="E3" parent="Elements" unique_id=1547231549 instance=ExtResource("2_0evxp")]
+position = Vector2(400, 0)
+
+[node name="E2" parent="Elements" unique_id=907395424 instance=ExtResource("2_0evxp")]
+position = Vector2(198, 0)
+
+[node name="Subscripts" type="Node2D" parent="." unique_id=1368767146]
+
+[node name="S4" parent="Subscripts" unique_id=2087806751 instance=ExtResource("3_ot322")]
+position = Vector2(904, 424)
+
+[node name="S3" parent="Subscripts" unique_id=1893696457 instance=ExtResource("3_ot322")]
+position = Vector2(704, 424)
+
+[node name="S2" parent="Subscripts" unique_id=107791239 instance=ExtResource("3_ot322")]
+position = Vector2(504, 424)
+
+[node name="S1" parent="Subscripts" unique_id=2067562322 instance=ExtResource("3_ot322")]
+position = Vector2(304, 424)

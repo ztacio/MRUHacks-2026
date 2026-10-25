@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://doxs8tk6718r2"]
+
+[ext_resource type="Texture2D" uid="uid://eb5ciy8pu38f" path="res://assets/button-letters.png" id="1_n4tde"]
+[ext_resource type="Script" uid="uid://cemtbqrtgcuoy" path="res://button.gd" id="2_vxja4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4tde"]
+atlas = ExtResource("1_n4tde")
+region = Rect2(9, 171, 14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxja4"]
+atlas = ExtResource("1_n4tde")
+region = Rect2(9, 315, 14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt4la"]
+atlas = ExtResource("1_n4tde")
+region = Rect2(9, 339, 14, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v48a6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4tde")
+}],
+"loop": 1,
+"name": &"H",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxja4")
+}],
+"loop": 1,
+"name": &"N",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lt4la")
+}],
+"loop": 1,
+"name": &"O",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx44i"]
+size = Vector2(90, 76)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=884997147]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=709298862]
+position = Vector2(45.017464, 38.090218)
+scale = Vector2(6.426077, 5.8322735)
+sprite_frames = SubResource("SpriteFrames_v48a6")
+animation = &"O"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=901251638]
+script = ExtResource("2_vxja4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1836804903]
+position = Vector2(45, 38)
+shape = SubResource("RectangleShape2D_kx44i")
