@@ -21,6 +21,10 @@ Navigation="*uid://dxjo7yq3xa6k0"
 Global="*uid://bber3l61x5nrm"
 BackgroundMusic1="*uid://bpsnhv1veisde"
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 interaction={
