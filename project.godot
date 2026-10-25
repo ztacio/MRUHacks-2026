@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="MRUHacks 2026"
-run/main_scene="uid://crmb7xm0puna8"
+run/main_scene="uid://cfcxk7fktnbj"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Navigation="*uid://dxjo7yq3xa6k0"
+global="*uid://bber3l61x5nrm"
 
 [physics]
 
