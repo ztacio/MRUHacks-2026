@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://735icm8hro1c"]
+
+[ext_resource type="Texture2D" path="res://assets/Modern_UI_Style_1.png" id="1_8lwqr"]
+[ext_resource type="Script" path="res://enter_button.gd" id="2_erty7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lwqr"]
+atlas = ExtResource("1_8lwqr")
+region = Rect2(736, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erty7"]
+atlas = ExtResource("1_8lwqr")
+region = Rect2(608, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2ovr"]
+atlas = ExtResource("1_8lwqr")
+region = Rect2(784, 336, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kx44i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lwqr")
+}],
+"loop": 1,
+"name": &"correct",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erty7")
+}],
+"loop": 1,
+"name": &"submit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2ovr")
+}],
+"loop": 1,
+"name": &"wrong",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3ee7"]
+size = Vector2(112, 100)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=752672529]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1081919163]
+position = Vector2(55.5, 50.5)
+scale = Vector2(6.9375, 6.3124995)
+sprite_frames = SubResource("SpriteFrames_kx44i")
+animation = &"correct"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=545686008]
+script = ExtResource("2_erty7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=128238729]
+position = Vector2(56, 50)
+shape = SubResource("RectangleShape2D_j3ee7")
