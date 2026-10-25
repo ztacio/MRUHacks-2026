@@ -2,6 +2,10 @@
 
 [ext_resource type="TileSet" uid="uid://dxnqvm3rjlf5x" path="res://tilesets/maintileset.tres" id="1_ju177"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="2_bw225"]
+[ext_resource type="Script" uid="uid://b53vb5cllcdci" path="res://spawntofarm.gd" id="3_vkr66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t23pn"]
+size = Vector2(12, 33)
 
 [node name="Node2D" type="Node2D" unique_id=612525484]
 
@@ -28,4 +32,19 @@ tile_map_data = PackedByteArray("AAAZAA0AAwAEABQAAAAZAA4AAwAEABUAAAA=")
 tile_set = ExtResource("1_ju177")
 
 [node name="CharacterBody2D" parent="." unique_id=25074221 instance=ExtResource("2_bw225")]
-position = Vector2(670, 220)
+position = Vector2(660, 224)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1083011602]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 112
+limit_right = 688
+limit_bottom = 496
+
+[node name="Exit" type="Area2D" parent="." unique_id=881711038]
+position = Vector2(26, 151)
+script = ExtResource("3_vkr66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=585907927]
+position = Vector2(656, 64)
+shape = SubResource("RectangleShape2D_t23pn")
