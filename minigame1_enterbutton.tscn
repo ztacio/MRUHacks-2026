@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://c65pn84ntuc8k"]
+[gd_scene format=3 uid="uid://di1vddfofwnfo"]
 
 [ext_resource type="Texture2D" uid="uid://bs2gn7fwg48h6" path="res://assets/Modern_UI_Style_1.png" id="1_q8a4b"]
-[ext_resource type="Script" path="res://m1_enter.gd" id="2_imtus"]
+[ext_resource type="Script" uid="uid://bv07xxmmruxna" path="res://m1_enter.gd" id="2_imtus"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8lwqr"]
 atlas = ExtResource("1_q8a4b")

@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dy54q386w6bgy"]
+[gd_scene format=3 uid="uid://cwpctf0cud6hd"]
 
 [ext_resource type="FontFile" uid="uid://dsnau1dk5cagb" path="res://PressStart2P-Regular.ttf" id="1_joiig"]
-[ext_resource type="PackedScene" path="res://multiple_choice_buttons.tscn" id="2_hgd3r"]
-[ext_resource type="PackedScene" uid="uid://c65pn84ntuc8k" path="res://minigame1_enterbutton.tscn" id="3_k0e1f"]
+[ext_resource type="PackedScene" uid="uid://dye3oilyxgqd1" path="res://multiple_choice_buttons.tscn" id="2_hgd3r"]
+[ext_resource type="PackedScene" uid="uid://di1vddfofwnfo" path="res://minigame1_enterbutton.tscn" id="3_k0e1f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esw2o"]
 bg_color = Color(0.8156863, 0.74509805, 0.6117647, 1)
