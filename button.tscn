@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://doxs8tk6718r2"]
+[gd_scene format=3 uid="uid://dywk267wgx33b"]
 
 [ext_resource type="Texture2D" uid="uid://eb5ciy8pu38f" path="res://assets/button-letters.png" id="1_n4tde"]
 [ext_resource type="Script" uid="uid://cemtbqrtgcuoy" path="res://button.gd" id="2_vxja4"]

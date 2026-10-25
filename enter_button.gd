@@ -26,16 +26,18 @@ func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 			and character6.animation == "4" \
 			and character7.animation == "1" \
 			and character8.animation == "3":
+				
+				
 				animated_sprite.play("correct")
 				label.text = "HEYYYYY LFG!"
+				Global.has_watering_can = true
+				print("Watering can acquired!")
+				
+				
 				await get_tree().create_timer(3).timeout
 
-				var tree = get_tree()
-				tree.change_scene_to_file("res://river.tscn")
+				get_tree().change_scene_to_file("res://river.tscn")
 
-				await tree.scene_changed
-
-				var player = tree.current_scene.get_node("Player")
 				
 			else:
 				animated_sprite.play("wrong")

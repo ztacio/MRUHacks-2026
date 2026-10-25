@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var character_direction: Vector2 #this initializes character direcction as a vector of x and y
 @export var character_speed := 80 #this creates a variable that we can see on the inspector
+@export var has_watering_can = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D #easily change animation by referencing it with a variable
 
 func _ready() -> void:
