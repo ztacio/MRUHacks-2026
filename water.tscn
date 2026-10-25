@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://lnckxrb5kd45"]
+
+[ext_resource type="Texture2D" uid="uid://cbbet3eyk5385" path="res://assets/Tool_Watering_Can.png" id="1_qi1wl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wcun"]
+atlas = ExtResource("1_qi1wl")
+region = Rect2(630, 65, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kx44i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wcun")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx44i"]
+size = Vector2(14, 10)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" unique_id=664029592]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1678820756]
+position = Vector2(9, 9.000001)
+scale = Vector2(1.125, 1.1249999)
+sprite_frames = SubResource("SpriteFrames_kx44i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=888903768]
+position = Vector2(10, 9)
+shape = SubResource("RectangleShape2D_kx44i")
