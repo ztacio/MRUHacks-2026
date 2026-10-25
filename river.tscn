@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
-[ext_resource type="Script" uid="uid://btuxtt10mlk4s" path="res://spawntoriver.gd" id="10_k2hi4"]
+[ext_resource type="PackedScene" uid="uid://x5t1mxlppjfd" path="res://water.tscn" id="9_stc0s"]
+[ext_resource type="Script" uid="uid://up2dp51oxl8b" path="res://wateringcan.gd" id="10_g5ypc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiml5"]
 texture = ExtResource("1_gqjxk")
@@ -65,7 +66,9 @@ texture = ExtResource("1_gqjxk")
 18:1/0 = 0
 18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.7837229, -8, -8, -8, -8, 8, 1.7837229, 8)
 19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.099095345, -8, 8, -8, 8, 0.99095726, 1.5855303, 0.8918619)
 20:1/0 = 0
+20:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.099095345, -8, -8, -8, -8, 0.99095726, -1.5855303, 0.8918619)
 21:1/0 = 0
 22:1/0 = 0
 24:1/0 = 0
@@ -18225,7 +18228,7 @@ size = Vector2(494, 11)
 size = Vector2(10, 337)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stc0s"]
-size = Vector2(39, 14.5)
+size = Vector2(71.5, 59.25)
 
 [node name="Node2D" type="Node2D" unique_id=229776437]
 position = Vector2(-245, -171)
@@ -18277,6 +18280,9 @@ shape = SubResource("RectangleShape2D_esw2o")
 position = Vector2(500, 161)
 shape = SubResource("RectangleShape2D_esw2o")
 
+[node name="Watering Can" parent="." unique_id=664029592 instance=ExtResource("9_stc0s")]
+position = Vector2(268, 278)
+
 [node name="Farmer" parent="." unique_id=25074221 instance=ExtResource("6_a75lk")]
 position = Vector2(98, 49)
 
@@ -18288,10 +18294,11 @@ limit_right = 250
 limit_bottom = 150
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1946881333]
-script = ExtResource("10_k2hi4")
+position = Vector2(131, 114)
+script = ExtResource("10_g5ypc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=181229410]
-position = Vector2(74, 8)
+position = Vector2(148.75, 171.625)
 shape = SubResource("RectangleShape2D_stc0s")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
