@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dnikx1sdkx731" path="res://assets/crops.png" id="5_kfypt"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="6_a75lk"]
 [ext_resource type="Texture2D" uid="uid://br6uwup5u7kd8" path="res://assets/Tool_Fishing_Rod.png" id="6_k2hi4"]
-[ext_resource type="PackedScene" uid="uid://lnckxrb5kd45" path="res://water.tscn" id="9_stc0s"]
+[ext_resource type="PackedScene" uid="uid://x5t1mxlppjfd" path="res://water.tscn" id="9_stc0s"]
 [ext_resource type="Script" uid="uid://up2dp51oxl8b" path="res://wateringcan.gd" id="10_g5ypc"]
 [ext_resource type="Script" uid="uid://btuxtt10mlk4s" path="res://spawntoriver.gd" id="10_k2hi4"]
 
