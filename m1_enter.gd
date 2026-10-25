@@ -18,6 +18,9 @@ func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 			and character2.animation == "B" \
 			and character3.animation == "C" :
 				animated_sprite.play("correct")
+				await get_tree().create_timer(2).timeout
+				get_tree().change_scene_to_file("res://river.tscn")
+				Global.has_watering_can = true
 			else:
 				animated_sprite.play("wrong")
 				await get_tree().create_timer(1.5).timeout

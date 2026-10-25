@@ -29,6 +29,9 @@ func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 			and character7.animation == "1" \
 			and character8.animation == "3":
 				animated_sprite.play("correct")
+				await get_tree().create_timer(2).timeout
+				get_tree().change_scene_to_file("res://farm.tscn")
+				Global.has_fertilizer = true
 			else:
 				animated_sprite.play("wrong")
 				await get_tree().create_timer(1.5).timeout
