@@ -1,9 +1,13 @@
 [gd_scene format=4 uid="uid://crmb7xm0puna8"]
 
 [ext_resource type="TileSet" uid="uid://dxnqvm3rjlf5x" path="res://tilesets/maintileset.tres" id="1_3a72r"]
+[ext_resource type="Script" uid="uid://b338gdw6we4kt" path="res://growth.gd" id="2_utm62"]
 [ext_resource type="PackedScene" uid="uid://e6etqciv13w" path="res://characters/farmer/farmer.tscn" id="2_yqulk"]
 [ext_resource type="Script" uid="uid://btuxtt10mlk4s" path="res://spawntoriver.gd" id="3_g4g62"]
 [ext_resource type="Script" uid="uid://b53vb5cllcdci" path="res://spawntofarm.gd" id="4_ewd04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoan5"]
+size = Vector2(51, 20)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kx44i"]
 
@@ -79,6 +83,7 @@ tile_map_data = PackedByteArray("AAAGAO//BQAUABAAAAAGAPD/BQAUABEAAAAGAPH/BQAUABI
 tile_set = ExtResource("1_3a72r")
 
 [node name="Tree Stages" type="Node2D" parent="Center" unique_id=1235512632]
+script = ExtResource("2_utm62")
 
 [node name="Stage 1" type="TileMapLayer" parent="Center/Tree Stages" unique_id=209719897]
 position = Vector2(96, 400)
@@ -94,6 +99,12 @@ tile_set = ExtResource("1_3a72r")
 position = Vector2(96, 400)
 tile_map_data = PackedByteArray("AAAHAOn/BgAPAAAAAAAHAOr/BgAPAAEAAAAHAOv/BgAPAAIAAAAHAOz/BgAPAAMAAAAHAO3/BgAPAAQAAAAHAO7/BgAPAAUAAAAHAO//BgAPAAYAAAAHAPD/BgAPAAcAAAAIAOn/BgAQAAAAAAAIAOr/BgAQAAEAAAAIAOv/BgAQAAIAAAAIAOz/BgAQAAMAAAAIAO3/BgAQAAQAAAAIAO7/BgAQAAUAAAAIAO//BgAQAAYAAAAIAPD/BgAQAAcAAAAJAOr/BgARAAEAAAAJAOv/BgARAAIAAAAJAOz/BgARAAMAAAAJAO3/BgARAAQAAAAJAO7/BgARAAUAAAAJAO//BgARAAYAAAAJAPD/BgARAAcAAAAKAOr/BgASAAEAAAAKAOv/BgASAAIAAAAKAOz/BgASAAMAAAAKAO3/BgASAAQAAAAKAO7/BgASAAUAAAAKAO//BgASAAYAAAALAOv/BgATAAIAAAALAOz/BgATAAMAAAALAO3/BgATAAQAAAALAO7/BgATAAUAAAAFAOz/BgANAAMAAAAFAO3/BgANAAQAAAAFAO7/BgANAAUAAAAGAOr/BgAOAAEAAAAGAOv/BgAOAAIAAAAGAOz/BgAOAAMAAAAGAO3/BgAOAAQAAAAGAO7/BgAOAAUAAAAGAO//BgAOAAYAAAA=")
 tile_set = ExtResource("1_3a72r")
+
+[node name="InteractionArea" type="Area2D" parent="Center/Tree Stages" unique_id=905087825]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center/Tree Stages/InteractionArea" unique_id=1830682197]
+position = Vector2(231.5, 152)
+shape = SubResource("RectangleShape2D_xoan5")
 
 [node name="Farmer" parent="." unique_id=25074221 instance=ExtResource("2_yqulk")]
 position = Vector2(231, 187)
@@ -179,4 +190,5 @@ script = ExtResource("4_ewd04")
 position = Vector2(-20, 0)
 shape = SubResource("RectangleShape2D_1rbq7")
 
+[connection signal="body_entered" from="Center/Tree Stages/InteractionArea" to="Center/Tree Stages" method="_on_interaction_area_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

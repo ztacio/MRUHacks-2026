@@ -657,7 +657,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoan5"]
 size = Vector2(8, 7)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=25074221]
+[node name="farmersbody" type="CharacterBody2D" unique_id=25074221]
 script = ExtResource("1_4cuon")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1109338352]
@@ -665,6 +665,6 @@ position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_xoan5")
 animation = &"walk_up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1302985892]
+[node name="farmershape" type="CollisionShape2D" parent="." unique_id=1302985892]
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_xoan5")
