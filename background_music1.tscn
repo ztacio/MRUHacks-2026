@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bpsnhv1veisde"]
+
+[ext_resource type="AudioStream" uid="uid://5xmlqhrp10bs" path="res://Bubbles.mp3" id="1_sex4r"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1588031475]
+stream = ExtResource("1_sex4r")
+autoplay = true
