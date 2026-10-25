@@ -11,6 +11,7 @@ func _ready() -> void:
 		$"Stage 2".visible = true
 	if Global.stage3complete:
 		$"Stage 3".visible = true
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
