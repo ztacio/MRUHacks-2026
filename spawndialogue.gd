@@ -6,6 +6,7 @@ func _ready() -> void:
 	$message1.visible = true
 	$message4.visible = false
 	$message7.visible = false
+	$endscreen.visible = false
 	
 	if Global.m1play:
 		$message1.visible = false
@@ -35,6 +36,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and $message7.visible == true:
 		$message7.visible = false
 		Global.m7play = true
+		Global.game_complete = true
+		
+	if Global.m7play == true and $message7.visible == false and Global.game_complete == true:
+		$endscreen.visible = true
+		
 		
 		
 		

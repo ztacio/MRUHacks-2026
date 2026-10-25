@@ -7,3 +7,4 @@ var stage3complete: bool = false
 var m1play: bool = false
 var m4play: bool = false
 var m7play: bool = false 
+var game_complete = false 
